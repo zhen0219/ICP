@@ -25,5 +25,7 @@ SUSE Linux Enterprise Server (SLES) 12 SP3
 
 --2.3 To check whether a port is open, run the following command: ssh -p <port_number> localhost
 Docker registry	 8500 Master	HA and non-HA	 Internal and External
+
+
 3.Known issues and limitations
 https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/getting_started/known_issues.html
