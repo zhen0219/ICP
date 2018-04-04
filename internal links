@@ -1,5 +1,29 @@
 1.IBM Cloud Private technical community 
 https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W1559b1be149d_43b0_881e_9783f38faaff
+IBM® Cloud Private v2.1.0.2 documentation
+https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.2/kc_welcome_containers.html
 
 2.Set up ICP-ce
 https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.2/installing/install_containers_CE.html
+
+--2.1 Important: The boot, master, proxy, VA, and management nodes in your cluster must use the same platform architecture. Only the worker nodes can use a different platform architecture. 
+Management console runs on master nodes only. Red Hat Enterprise Linux (RHEL) 7.3 and 7.4   
+Location	Minimumdiskspace	  Node
+/var/lib/docker	>40 GB	All Nodes   /var/lib/etcd	>1 GB	Master
+/var/lib/registry	Must be large enough to host the Docker images that you plan to host in your private image registry	Master
+/opt/ibm/cfc/	>100 GB	 Master and Management
+/var/lib/kubelet	>10 GB	All Nodes need >10 GB of disk space
+If you enable the Vulnerability Advisor, the VA node needs >100 GB of disk space. /var/lib/icp/va/	>100 GB	VA node
+Important: The /var directory is the default storage location for most Docker images and the containers that are used in your IBM Cloud Private cluster.
+
+--2.2 Versions of Docker that are supported by IBM Cloud Private
+Platform	Operating system	Docker CE	Docker EE  
+Linux® 64-bit	Red Hat Enterprise Linux (RHEL) 7.3 and 7.4	 IBM Cloud Private 2.1.0.2 Docker for Linux	icp-docker-17.09_x86_64.bin
+For RHEL systems, you can use the supplied IBM Cloud Private Docker packages on boot and cluster nodes.
+Ubuntu 16.04 LTS	1.12 to 17.09	17.03 to 17.09
+SUSE Linux Enterprise Server (SLES) 12 SP3
+
+--2.3 To check whether a port is open, run the following command: ssh -p <port_number> localhost
+Docker registry	 8500 Master	HA and non-HA	 Internal and External
+3.Known issues and limitations
+https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/getting_started/known_issues.html
