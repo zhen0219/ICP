@@ -29,3 +29,7 @@ Docker registry	 8500 Master	HA and non-HA	 Internal and External
 
 3.Known issues and limitations
 https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/getting_started/known_issues.html
+
+
+4.Details about config.yaml file
+https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.2/installing/config_yaml.html#docker_setting
