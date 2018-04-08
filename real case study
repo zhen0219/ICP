@@ -1,0 +1,13 @@
+1. After successful deployment URL is not opening.
+1) on the master host, run "docker ps > /tmp/support.txt"    // this is to see whether all containers running well
+2) echo "======================================" >> /tmp/support.txt;
+3) run "docker images >> /tmp/support.txt"  //this is to see  whether the original images are well.
+4) echo "======================================" >> /tmp/support.txt;
+5) and then run " journalctl -u kubelet >> /tmp/support.txt  // checking upon the status of kubelet
+6) echo "======================================" >> /tmp/support.txt;
+7)run cli "kubectl  -s 127.0.0.1:8888 get pods -n kube-system" >> /tmp/support.txt   //check the health of kube-system
+8) collecting some basic version info, if we need to reproduce the case in our lab.
+    cat /etc/*release* >> /tmp/support.txt;
+    docker --version >>  /tmp/support.txt;
+    
+    
