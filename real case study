@@ -10,6 +10,17 @@
 2) check it again by the command 
 kubectl get pods -n kube-system -s 127.0.0.1:8888 
 
+I had to enable DNS on my router
+to resolve DHCP ids. Without it, the install was failing. My assumption is
+that the installer is using something like 'nslookup' or 'host' command but
+neither of these commands look into the /etc/hosts file, they query the DNS
+servers.
+
+problem solved by:
+1. uninstall
+2. add proxy_address_ip
+3. add calico_ipip_enabled is set to true
+4. re install
 
 
 2. After successful deployment URL is not opening.
