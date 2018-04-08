@@ -1,4 +1,15 @@
 4.
+I quickly check the connected logs, the 'unified-router' pods are not
+running in your environment. To resolve such issue, you can try:
+1. Ensure you install the cluster with ICP 2.1.0 GA package.
+2. Ensure your master node CPU has sse4_2 flag. You can run
+'cat /proc/cpuinfo | grep sse' to check.
+3. If the URL works previously, try to remove these 'unified-router' pods,
+ICP will create them automatically.
+    # kubectl -n kube-system delete pod <unified-router-pod-name>
+    # kubectl -s 127.0.0.1:8888 -n kube-system delete pod
+<unified-router-pod-name>
+
 Summary:
 - Cluster is installed successfully.
 - LDAP integration issue needs to be resolved as soon as possible.
