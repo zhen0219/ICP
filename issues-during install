@@ -1,0 +1,10 @@
+1.
+TASK [cloudant : Waiting for cloudant database initialization] ***************************************************************************************
+FAILED - RETRYING: Waiting for cloudant database initialization (100 retries left).
+FAILED - RETRYING: Waiting for cloudant database initialization (99 retries left).
+FAILED - RETRYING: Waiting for cloudant database initialization (98 retries left).
+FAILED - RETRYING: Waiting for cloudant database initialization (97 retries left).
+FAILED - RETRYING: Waiting for cloudant database initialization (96 retries left).
+
+2.socat yum install failed
+https://blog.csdn.net/koozxcv/article/details/50520057
