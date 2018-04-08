@@ -1,3 +1,29 @@
+4.
+Summary:
+- Cluster is installed successfully.
+- LDAP integration issue needs to be resolved as soon as possible.
+- CLI issue is resolved: a proxy server needed to be defined on the host running the CLI
+- Symlink issue is resolved through kernel upgrade. We can try to reproduce this in-house.
+- Master node memory issue is resolved.
+- Master host name instead of IP issue: Please follow the instructions in this link:
+https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0/installing/create_ca_cert.html
+ 
+Action Items:
+- ICP team will follow up to further investigate the LDAP issue
+- Master node memory requirements: documents need to be updated
+- Catalog issue: ICp team will follow up with action plan
+ 
+Hint: we're working on CentOS 7.4 with kernel 3.10.0; to try and fix the
+missing symlinks problem, we updated a worker kernel to version 4.13.9 and,
+with this version, the GlusterFS installation was fine. So the kernel
+version plays a fundamental role here.
+(On the other hand, for ICP 1.2.0 the Master requirement was 8 GB of RAM, but we ran it on a 4 GB server).
+DNS names not working in the UI: as we already did in 1.2.0 and in 2.1.0-beta-1, we defined an alias on our DNS (CNAME record) which points to
+the ICP Master server. Pointing the browser on the URL with the CNAME, we are redirected to a different URL and we get eventually an error page. The
+same if we use the FQDN of the Master server.
+The only way to make it work is to use the IP address of the Master server,
+which is ugly. :-(
+
 3.To debug the 'calico-node-xxx' pod issue, I saw you have installed kubectl, then you can run below commands to get 'calico-node' Pod information and the logs.
 
 (1) kubectl -s 127.0.0.1:8888 get pods -n kube-system | grep calico-node
