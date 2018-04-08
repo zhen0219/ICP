@@ -4,6 +4,13 @@
 (2) kubectl -s 127.0.0.1:8888 -n kube-system logs <calico-node-pod-name> -c calico-node
 (3) kubectl -s 127.0.0.1:8888 -n kube-system describe pod <calico-node-pod-name
 
+1) delete the router pods, and let kube-system restarte a new one.
+ kubectl delete pods <pod-name> -n kube-system -s 127.0.0.1:8888
+
+2) check it again by the command 
+kubectl get pods -n kube-system -s 127.0.0.1:8888 
+
+
 
 2. After successful deployment URL is not opening.
 1) on the master host, run "docker ps > /tmp/support.txt"    // this is to see whether all containers running well
