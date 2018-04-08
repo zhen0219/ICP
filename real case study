@@ -11,3 +11,19 @@
     docker --version >>  /tmp/support.txt;
     
     
+ 2. Output of docker logs:
+    1.1. docker logs k8s_etcd_k8s-etcd-10.0.0.160_kube-system_66432c21fd31d754358fad9a3154379a_0 2>&1
+    1.2. docker logs k8s_apiserver_k8s-master-10.0.0.160_kube-system_28b94386aaf8c58cfcace7d63e526e0b_3 2>&1
+    1.3. docker logs k8s_apiserver_k8s-master-10.0.0.160_kube-system_28b94386aaf8c58cfcace7d63e526e0b_4 2>&10
+ 
+    kubelet log:
+    - journalctl -u kubelet
+                   >>nmap -p 8001 localhost
+                   
+    - The installation is now successfully completed and the cluster is up and running.
+    - To achieve the above, the following changes were made:
+      - iptables was enabled on master host
+      - network_cidr was changed to its default value.
+      - a complete uninstall was performed
+      - left-over images were all cleaned-up on the hosts.
+      - Installation was performed in a fresh directory.
