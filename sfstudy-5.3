@@ -1,1 +1,7 @@
-
+1.Some pods are constantly terminating and restarting
+The problem has been resolved, there are three issues in customer environment.
+    /var/log do not have enough space, only 2G. This caused image-manager cannot write log and start failed. This is resolved after removing some large log files.
+    There is a docker bug, which caused kubelet create container failed, and the only solution provided by Kubernetes community is restart the whole server.
+    They did not mount the /var/lib/registry correctly, after re-create the image-manger, everything come back.
+    
+    
