@@ -3,5 +3,12 @@ The problem has been resolved, there are three issues in customer environment.
     /var/log do not have enough space, only 2G. This caused image-manager cannot write log and start failed. This is resolved after removing some large log files.
     There is a docker bug, which caused kubelet create container failed, and the only solution provided by Kubernetes community is restart the whole server.
     They did not mount the /var/lib/registry correctly, after re-create the image-manger, everything come back.
-    
+ 
+ I think that I misunderstood the item 2 you asked this morning. This misunderstanding was caused by 2 different ways of Docker installing in an ICP environment.
+Case 1.
+If a user installed an individual docker image on his environment, all technical supports including troubleshooting and fix patch are docker software company's responsibility.
+Case 2.
+If a user installed IBM Cloud Private Docker Package, obviously ICP support team should be responsible for troubleshooting, but requesting fix patch will be transferred to docker software company.
+If your customer installed the Docker package, then all requests of fix patch for the package will be transferred to the Docker company via ICP Development team.
+As Gung Ya confirmed during the troubleshooting, this issue has already been reported to Development team. I will keep you updated as soon as any progress on Dev side.   
     
