@@ -17,3 +17,24 @@ If a critical defect is found in the open source software within IBM Cloud Priva
 As I updated yesterday, Dev team has already created a ticket to leverage both IBM resource and docker community. The ticket will log all communications between IBM and Decker in order to build up a patch for this case.
 I will keep you updated as soon as any feedback from the Dev.
 Please advise me if you have questions or concerns.
+
+
+2.Helm 
+The problem is not Jenkins. Problem is string sorting in ICP.
+ICP shows that 0.9.4 in newer than 0.14.4. 
+I understand the issue is not Jenkins, but the string sorting. However, only after applying the Jenkins application, we can see the issue, am I right?
+We install jenkins form Google's repo: https://kubernetes-charts.storage.googleapis.com
+Default installation with persistent storage on NFS.
+For this case, I have logged git hub issue. DEV said the issue was fixed in 2.1.0.3. I asked more information and waiting for dev feedback.
+
+3.after a master restart in a HA environment the administration is not availabe
+-output of "docker ps -a |grep -i maria"
+- output of "docker logs <id>", where id is the id of any containers from the above.
+
+To gain a better understanding of the issue you provided, I would like you to share following information with me.
+Q1. You mentioned "They have restarted the docker service on the Active master
+-> Have they restarted "kubelet" daemon as well?
+Q2. The docker service has restarted only on one of 3 masters?
+Q3. What kind of cert have they installed on /etc/docker/certs.d?
+-> If they followed up any instruction on the internet, please share the URL.
+Q4. Can you share the screen shot they encountered including the error message?
