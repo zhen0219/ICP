@@ -8,3 +8,57 @@ FAILED - RETRYING: Waiting for cloudant database initialization (96 retries left
 
 2.socat yum install failed
 https://blog.csdn.net/koozxcv/article/details/50520057
+
+
+3. uninstall
+file config.yaml is required：
+TASK [uninstall : Configuring kubectl] *********************************************************************************************************************
+
+TASK [uninstall : Removing node from Kubernetes] ***********************************************************************************************************
+
+TASK [uninstall : Removing node from Calico] ***************************************************************************************************************
+
+TASK [uninstall : Configuring kubectl] *********************************************************************************************************************
+
+TASK [uninstall : Getting application number] **************************************************************************************************************
+
+TASK [uninstall : debug] ***********************************************************************************************************************************
+
+TASK [uninstall : Removing all workload] *******************************************************************************************************************
+
+TASK [uninstall : Stopping Kubelet service] ********
+TASK [uninstall : Removing Kubernetes containers] *****
+TASK [uninstall : Unmounting Kubernetes volumes] ****
+TASK [uninstall : Removing directories and files] **********************************************************************************************************
+changed: [9.181.67.31] => (item=/etc/cfc)
+changed: [9.181.67.36] => (item=/etc/cfc)
+changed: [9.181.67.26] => (item=/etc/cfc)
+failed: [9.181.67.31] (item=/opt/ibm/cfc) => {"failed": true, "item": "/opt/ibm/cfc", "msg": "rmtree failed: [Errno 16] Device or resource busy: '/opt/ibm/cfc'"}
+
+TASK [uninstall : Cleaning up directory if existing] *******************************************************************************************************
+changed: [9.181.67.31] => (item=/var/lib/registry)
+changed: [9.181.67.26] => (item=/var/lib/registry)
+changed: [9.181.67.36] => (item=/var/lib/registry)
+changed: [9.181.67.31] => (item=/etc/cfc)
+changed: [9.181.67.31] => (item=/opt/ibm/cfc)
+changed: [9.181.67.36] => (item=/etc/cfc)
+changed: [9.181.67.26] => (item=/etc/cfc)
+changed: [9.181.67.31] => (item=/var/lib/etcd)
+changed: [9.181.67.31] => (item=/var/lib/kubelet)
+changed: [9.181.67.36] => (item=/opt/ibm/cfc)
+changed: [9.181.67.26] => (item=/opt/ibm/cfc)
+changed: [9.181.67.31] => (item=/var/lib/mysql)
+changed: [9.181.67.31] => (item=/var/lib/icp)
+changed: [9.181.67.36] => (item=/var/lib/etcd)
+changed: [9.181.67.26] => (item=/var/lib/etcd)
+changed: [9.181.67.36] => (item=/var/lib/kubelet)
+changed: [9.181.67.26] => (item=/var/lib/kubelet)
+changed: [9.181.67.36] => (item=/var/lib/mysql)
+changed: [9.181.67.26] => (item=/var/lib/mysql)
+changed: [9.181.67.36] => (item=/var/lib/icp)
+changed: [9.181.67.26] => (item=/var/lib/icp)
+
+TASK [uninstall : Cleaning up cluster vip] *****************************************************************************************************************
+changed: [9.181.67.31]
+changed: [9.181.67.26]
+changed: [9.181.67.36]
