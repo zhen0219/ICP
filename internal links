@@ -1,3 +1,43 @@
+Hi All,
+ 
+I am collecting valuable training materials, which is accumulated as ICP workload goes on. If you have any suggestion, please do let me know.
+ 
+Regards,
+Zhao
+ 
+ 
+1) support tools by Arash
+
+  We have a tool set (ICP Problem Determination Tool), that you can use to collect logs. Here is an internal link:
+  https://github.ibm.com/IBMPrivateCloud/support-tools
+ 
+2) training sessions orgnized by Rachid Boukhari El  
+   This recording is also uploaded in the playback folder: https://ibm.ent.box.com/folder/45109999876 ? However only Xiaodong Can access this folder.
+   Another way is to retrieve the info from Rachid's WebMeeting Record, all related info is recorded as below.
+   https://jazz07.rchland.ibm.com:21443/jazz/web/projects/pc-management#action=com.ibm.team.workitem.viewWorkItem&id=186744
+ 
+3) review github issue logged by support engineers
+ 
+   You can use following URL to retrieve all github issues by individual engineer. Here we uses shfxing as an example.
+   https://github.ibm.com/IBMPrivateCloud/roadmap/issues/created_by/shfxing
+   Filter is " is:open is:issue author:shfxing " or " is:closed is:issue author:shfxing "
+ 
+ICP Support Engineers -  Beijing
+    bjsongt
+    wenzy
+    liucbj
+    shfxing
+    yuwang1 - Wang Yu (Japanese)
+    
+ICP Support Engineers - Toronto
+    adeshmeh - Deshmeh Arash
+    diwang - Wang Di
+    kyung - Ryu Kyung Ho (Korean)
+    chenzhan - Zhang Chen
+
+
+
+
 the GA build   http://pokgsa.ibm.com/projects/i/icp-2.1.0.2/
 http://pokgsa.ibm.com/projects/i/icp-2.1.0.2/
 
